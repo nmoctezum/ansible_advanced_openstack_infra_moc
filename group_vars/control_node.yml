@@ -1,5 +1,6 @@
 openstack_cloud: openstack
 provisioning_ssh_key: ansible_ssh_key
+openstack_server_state: present
 
 openstack_images:
 
@@ -19,14 +20,14 @@ openstack_flavors:
     state: present
     vcpus: 1
     ram: 1024
-    disk: 20
+    disk: 10
 
   - name: m2.medium
     cloud: "{{ openstack_cloud }}"
     state: present
     vcpus: 2
     ram: 2048
-    disk: 20
+    disk: 10
 
 openstack_keypair:
 
